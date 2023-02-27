@@ -5,7 +5,7 @@ using System.Runtime.Intrinsics.X86;
 using WebApi.Common;
 using WebApi.DBOperations;
 
-namespace WebApi.BookOperations.UpdateBook
+namespace WebApi.BookOperations.UpdateBookCommand
 {
     public class UpdateBookCommand
     {

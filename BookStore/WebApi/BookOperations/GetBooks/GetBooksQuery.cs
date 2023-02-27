@@ -3,8 +3,9 @@ using System.Linq;
 using AutoMapper;
 using WebApi.Common;
 using WebApi.DBOperations;
+using WebApi.Entities;
 
-namespace WebApi.BookOperations.GetBooks
+namespace WebApi.BookOperations.GetBooksQuery
 {
     public class GetBooksQuery
     {

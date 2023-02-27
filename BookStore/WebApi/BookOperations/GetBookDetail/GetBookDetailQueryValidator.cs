@@ -4,7 +4,7 @@ using AutoMapper;
 using FluentValidation;
 using WebApi.DBOperations;
 
-namespace WebApi.BookOperations.GetBookDetail
+namespace WebApi.BookOperations.GetBookDetailQuery
 {
     public class GetBookDetailQueryValidator : AbstractValidator<GetBookDetailQuery>
     {

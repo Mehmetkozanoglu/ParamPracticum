@@ -6,6 +6,7 @@ using WebApi.Application.GenreOperations.DeleteGenre;
 using WebApi.Application.GenreOperations.Queries.GetGenreDetail;
 using WebApi.Application.GenreOperations.Queries.GetGenres;
 using WebApi.Application.GenreOperations.UpdateGenre;
+using WebApi.BookOperations;
 using WebApi.DBOperations;
 
 
@@ -16,9 +17,9 @@ namespace WebApi.Controllers
     public class GenreController : ControllerBase
  {
        
-    private readonly BookStoreDbContext _context;
+    private readonly IBookStoreDbContext _context;
     private readonly IMapper  _mapper;
-    public GenreController(BookStoreDbContext context , IMapper mapper)
+    public GenreController(IBookStoreDbContext context , IMapper mapper)
     {
       _context = context;
       _mapper = mapper;

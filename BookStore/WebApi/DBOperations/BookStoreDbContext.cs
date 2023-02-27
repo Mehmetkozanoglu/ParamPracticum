@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using WebApi.DBOperations;
+using WebApi.BookOperations;
 using WebApi.Entities;
 
 namespace WebApi.DBOperations
 {
-    public class BookStoreDbContext : DbContext , IBookStoreDbContext
+    public class BookStoreDbContext : DbContext,IBookStoreDbContext
     {
        public BookStoreDbContext(DbContextOptions<BookStoreDbContext> options) : base(options) {}
        public DbSet<Book> Books {get; set;}
