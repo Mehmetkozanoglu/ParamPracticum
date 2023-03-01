@@ -20,7 +20,7 @@ namespace WebApi.BookOperations.GetBookDetail
        {
         var book = _dbContext.Books.Include(x => x.Genre).Where(book => book.Id == BookId).SingleOrDefault();
         if(book is null)
-           throw new InvalidOperationException("Kitap Bulunamadı!");
+           throw new InvalidOperationException("Kitap Bulunamadı.");
 
         BookDetailViewModel vm = _mapper.Map<BookDetailViewModel>(book); //new BookDetailViewModel();
         // vm.Title = book.Title;

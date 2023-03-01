@@ -19,10 +19,10 @@ namespace WebApi.Application.GenreOperations.UpdateGenre
        {
         var genre = _context.Genres.SingleOrDefault(x => x.Id == GenreId);
         if(genre is null)
-          throw new InvalidOperationException ("Kitap Türü Bulunamadı");
+          throw new InvalidOperationException ("Kitap türü bulunamadı!");
 
         if(_context.Genres.Any(x => x.Name.ToLower() == Model.Name.ToLower() && x.Id != GenreId ))
-           throw new InvalidOperationException("Aynı isimle bir kitap türü zaten mevcut");
+           throw new InvalidOperationException("Aynı isimli kitap türü zaten mevcut");
 
         genre.Name = string.IsNullOrEmpty(Model.Name.Trim()) ? genre.Name : Model.Name;
         genre.IsActive = Model.IsActive;

@@ -4,14 +4,15 @@ using AutoMapper;
 using System.Linq;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using WebApi.BookOperations;
 
 namespace WebApi.Application.AuthorOperations.Queries.GetAuthors
 {
     public class GetAuthorsQuery
     {
-        private readonly BookStoreDbContext _dbContext;
+        private readonly IBookStoreDbContext _dbContext;
         private readonly IMapper _mapper;
-        public GetAuthorsQuery(BookStoreDbContext dbContext, IMapper mapper)
+        public GetAuthorsQuery(IBookStoreDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;
