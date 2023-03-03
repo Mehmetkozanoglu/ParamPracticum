@@ -3,6 +3,7 @@ using System.Linq;
 using AutoMapper;
 using WebApi.DBOperations;
 using WebApi.Entities;
+using WebApi.UserOperations.Commands.CreateUser;
 
 namespace WebApi.BookOperations.CreateBook
 {
